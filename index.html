@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Library</title>
+<meta charset='utf-8'>
+<meta content='width=device-width, initial-scale=1' name='viewport'>
+<link href='fontawesome-free-6.2.1-web/css/all.min.css' rel='stylesheet'>
+<link href='bootstrap.min.css' rel='stylesheet'>
+<link href='style.css' rel='stylesheet'>
+</head>
+<body>
+<div class='icon'>
+<i class='fa-solid fa-book-open-reader fa-2xl'></i>
+</div>
+<header class='h2 bg-dark text-white p-5 text-center'>Book Accounting</header>
+<div class='searchbox'>
+<input class='search-input' placeholder='search' type='text'>
+<button class='btn btn-warning searchbtn' type='button'>
+<i class='fa fa-search'></i>
+</button>
+</div>
+<main>
+<table class='text-white text-center books'>
+<thead>
+<th class='p-3'></th>
+<th class='p-3'>Id</th>
+<th class='p-3'>Name</th>
+<th class='p-3'>Author</th>
+<th class='p-3'>In stock</th>
+<th class='p-3'>Photo</th>
+</thead>
+</table>
+</main>
+<footer class='buttons'>
+<button class='btn btn-primary add-btn'>Add</button>
+<button class='btn btn-secondary change-btn'>Change</button>
+<button class='btn btn-danger remove-btn'>Remove</button>
+</footer>
+<div class='modal-window'>
+<form class='add-form'>
+<span class='close-modal-w'></span>
+<div class='block'>
+<label for='bookname'>Name:</label>
+<input data-name='name' id='bookname' required type='text'>
+</div>
+<div class='block'>
+<label for='bookauthor'>Author:</label>
+<input data-name='author' id='bookauthor' required type='text'>
+</div>
+<div class='block'>
+<label for='bookinstock'>Count in stock:</label>
+<input data-name='instock' id='bookinstock' min='0' required type='number'>
+</div>
+<div class='block'>
+<label for='bookphoto'>Photo:</label>
+<input accept='.jpg, .jpeg' data-name='photo' id='bookphoto' required type='file'>
+</div>
+<div class='block'>
+<button class='btn btn-success' type='submit'>Add</button>
+</div>
+</form>
+</div>
+<div class='modal-image'>
+<span class='close-modal-i'></span>
+<div class='modal-image-i'></div>
+</div>
+<div class='modal-window-change'>
+<form class='change-form'>
+<span class='close-modal-c'></span>
+<div class='block'>
+<label for='booknamechange'>Name:</label>
+<input data-name='name' id='booknamechange' required type='text'>
+</div>
+<div class='block'>
+<label for='bookauthorchange'>Author:</label>
+<input data-name='author' id='bookauthorchange' required type='text'>
+</div>
+<div class='block'>
+<label for='bookinstockchange'>Count in stock:</label>
+<input data-name='instock' id='bookinstockchange' min='0' required type='number'>
+</div>
+<div class='block'>
+<label for='bookphotochange'>Photo:</label>
+<input accept='.jpg, .jpeg' data-name='photo' id='bookphotochange' required type='file'>
+</div>
+<div class='block'>
+<button class='btn btn-success' type='submit'>Save</button>
+</div>
+</form>
+</div>
+<script src='jquery-3.6.3.min.js'></script>
+<script src='bootstrap.bundle.min.js'></script>
+<script src='script.js'></script>
+</body>
+</html>

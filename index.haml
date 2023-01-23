@@ -1,0 +1,71 @@
+!!!
+%html
+    %head
+        %title Library
+        %meta(charset="utf-8")
+        %meta(name="viewport" content="width=device-width, initial-scale=1")
+        %link(href="fontawesome-free-6.2.1-web/css/all.min.css" rel="stylesheet")
+        %link(href="bootstrap.min.css" rel="stylesheet")
+        %link(href="style.css" rel="stylesheet")
+    %body
+        .icon
+            %i.fa-solid.fa-book-open-reader.fa-2xl
+        %header.h2.bg-dark.text-white.p-5.text-center Book Accounting 
+        .searchbox
+            %input.search-input(type="text" placeholder="search")
+            %button.btn.btn-warning.searchbtn(type="button")
+                %i.fa.fa-search
+        %main
+            %table.text-white.text-center.books
+                %thead
+                    %th.p-3
+                    %th.p-3 Id
+                    %th.p-3 Name
+                    %th.p-3 Author
+                    %th.p-3 In stock
+                    %th.p-3 Photo
+        %footer.buttons
+            %button.btn.btn-primary.add-btn Add
+            %button.btn.btn-secondary.change-btn Change
+            %button.btn.btn-danger.remove-btn Remove
+        .modal-window
+            %form.add-form  
+                %span.close-modal-w
+                .block
+                    %label(for="bookname") Name:
+                    %input(type="text" id="bookname" required){:data=>{:name=>"name"}}
+                .block    
+                    %label(for="bookauthor") Author:
+                    %input(type="text" id="bookauthor" required){:data=>{:name=>"author"}}
+                .block    
+                    %label(for="bookinstock") Count in stock:
+                    %input(type="number" id="bookinstock" min="0" required){:data=>{:name=>"instock"}}
+                .block   
+                    %label(for="bookphoto") Photo: 
+                    %input(type="file" id="bookphoto" required accept=".jpg, .jpeg"){:data=>{:name=>"photo"}}
+                .block
+                    %button.btn.btn-success(type="submit")Add   
+        .modal-image 
+            %span.close-modal-i
+            .modal-image-i
+        .modal-window-change
+            %form.change-form  
+                %span.close-modal-c
+                .block
+                    %label(for="booknamechange") Name:
+                    %input(type="text" id="booknamechange" required){:data=>{:name=>"name"}}
+                .block    
+                    %label(for="bookauthorchange") Author:
+                    %input(type="text" id="bookauthorchange" required){:data=>{:name=>"author"}}
+                .block    
+                    %label(for="bookinstockchange") Count in stock:
+                    %input(type="number" id="bookinstockchange" min="0" required){:data=>{:name=>"instock"}}
+                .block   
+                    %label(for="bookphotochange") Photo: 
+                    %input(type="file" id="bookphotochange" required accept=".jpg, .jpeg"){:data=>{:name=>"photo"}}
+                .block
+                    %button.btn.btn-success(type="submit")Save   
+        %script(src="jquery-3.6.3.min.js")
+        %script(src="bootstrap.bundle.min.js")
+        %script(src="script.js")
+    
